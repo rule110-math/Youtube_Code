@@ -1,0 +1,4 @@
+Manipulate[( 
+   Unevaluated[
+     Table[BitXor[Prime[a], Prime[b]], {a, 1, m}, {b, 1, m}]] /. 
+    m -> a1) // ArrayPlot, {a1, 1, 101, 1}]
