@@ -1,0 +1,23 @@
+
+x = 
+ Unevaluated@
+   Table [If[b > a, 0, If[Mod[a, b] == 0, 1, 0]], {a, 1, n}, {b, 1, 
+     n}] /. n -> 10; x // MatrixForm;
+
+In[70]:= y = Range[10]
+
+Out[70]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+In[71]:= m = LinearSolve[x, y]
+
+Out[71]= {1, 1, 2, 2, 4, 2, 6, 4, 6, 4}
+
+In[73]:= Array[EulerPhi, 10]
+
+Out[73]= {1, 1, 2, 2, 4, 2, 6, 4, 6, 4}
+
+In[67]:= g = x // Inverse;
+
+In[72]:= LinearSolve[g, m]
+
+Out[72]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
