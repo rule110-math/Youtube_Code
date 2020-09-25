@@ -1,0 +1,14 @@
+Clear [m, w, c]
+man = 50 ;
+woman = 10;
+chiled = 1;
+
+
+
+m + w + c == 100;
+m man + w woman + c chiled == 500;
+
+Do[If[ m + w + c == 100 && m man + w woman + c chiled == 500, 
+  Print[{m, w, c}]  ], {m, 1, 100}, {w, 1, 100}, {c, 1, 100}]
+
+{1,39,60}
