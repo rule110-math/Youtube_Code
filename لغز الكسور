@@ -1,0 +1,9 @@
+
+i=0
+While[i<100000,
+     i++;
+      {a,b,c}=RandomInteger[{1,9},3];
+      If[1/a+1/b+1/c==3/4&&a!=b!=c  , Print[{a,b,c},"  ",i];
+        Break[]
+        ]
+    ]
