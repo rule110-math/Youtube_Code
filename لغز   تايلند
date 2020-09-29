@@ -1,0 +1,29 @@
+x = Tuples[Range[1, 9], 5];
+
+y = If[DuplicateFreeQ[#], #, Nothing] & /@ x;
+
+
+
+Do[
+ 
+ {a, b, c, d, e} = i;
+ 
+ If[(10000 a + 1000 b + 100 c + 10 d + e)*a == 111111 e, 
+  Print[{a, b, c, d, e}]]
+ 
+ , {i, y}]
+
+{7,9,3,6,5}
+
+
+
+
+
+i = 0; While[True,
+ i++;
+ {a, b, c, d, e} = RandomInteger[{1, 9}, 5];
+ If[(10000 a + 1000 b + 100 c + 10 d + e)*a == 111111 e, 
+  Print[{a, b, c, d, e}, "=", i]; Break[]];
+ ]
+
+{7,9,3,6,5}=36922
