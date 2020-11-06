@@ -1,0 +1,9 @@
+f[x_]:=3-x+Sin[x]
+
+p=1;n=10;
+
+While[Abs[p-n]>0.005,
+ Print[N@{p,n}];
+ r=f[(p+n)/2]//N;
+ If[r>0,p=(n+p)/2,n=(n+p)/2];
+]
