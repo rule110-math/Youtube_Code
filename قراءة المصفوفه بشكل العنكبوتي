@@ -1,0 +1,22 @@
+
+a=Partition[Range[9],3];
+MatrixForm@a
+
+1	2	3
+4	5	6
+7	8	9
+
+
+ l={};
+x=1;
+y=a//Dimensions//First;
+Do[
+l=Join[l,{Table[a[[x,n]],{n,x,y}],
+  Table[a[[n,y]],{n,x+1,y}],
+  Table[a[[y,n]],{n,y-1,x,-1}],
+Table[a[[n,x]],{n,y-1,x+1,-1}]}//Flatten];
+  x++;
+y--;
+,{(a // Dimensions // First) - 1}];l
+
+{1,2,3,6,9,8,7,4,5}
