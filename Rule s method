@@ -6,7 +6,8 @@ h=.1;
 {x,y}={x0,y0};
 l={};
 Do[
-y=y+h *f[x,y];
-x=x+h;
-l=Join[l,{{x,y}}];
-Print[x,"   ",y],{5}]
+  y=y+h *f[x,y];
+  x=x+h;
+  l=Join[l,{{x,y}}];
+  Print[x,"   ",y], 
+{5}]
