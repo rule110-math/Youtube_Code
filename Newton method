@@ -1,0 +1,11 @@
+ Clear[x]
+m=Sin[x^5-2x^3+x]
+
+f[x_]:=m
+d=D[f[x],x]
+
+x=3;
+Do[
+  Print[x//N];
+  x=x-f[x]/(d);
+,{5}]
